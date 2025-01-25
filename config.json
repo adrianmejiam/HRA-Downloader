@@ -1,6 +1,6 @@
 {
-    "email": "",
-    "password": "",
+    "email": "12b89ba8d2@emailawb.pro",
+    "password": "Mexico_2025",
     "outPath": "HRA downloads",
     "trackTemplate": "{{.trackPad}}. {{.title}}",
     "downloadBooklets": true,
