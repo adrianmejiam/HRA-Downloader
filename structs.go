@@ -24,7 +24,7 @@ type Config struct {
 }
 
 type Args struct {
-	Urls    []string `arg:"positional, required"`
+	Urls    []string `arg:"positional"`
 	OutPath string   `arg:"-o"`
 }
 
