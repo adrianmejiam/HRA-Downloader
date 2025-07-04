@@ -23,26 +23,6 @@ type Config struct {
 	Language         string
 }
 
-package main
-
-import (
-	"fmt"
-	"os"
-
-	"github.com/alexflint/go-arg"
-)
-
-type Args struct {
-	Urls []string `arg:"positional"`
-}
-
-import (
-	"fmt"
-	"os"
-
-	"github.com/alexflint/go-arg"
-)
-
 type Args struct {
 	Urls []string `arg:"positional"`
 }
