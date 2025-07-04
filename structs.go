@@ -23,6 +23,15 @@ type Config struct {
 	Language         string
 }
 
+package main
+
+import (
+	"fmt"
+	"os"
+
+	"github.com/alexflint/go-arg"
+)
+
 type Args struct {
 	Urls []string `arg:"positional"`
 }
@@ -32,7 +41,16 @@ func main() {
 	p := arg.MustParse(&args)
 
 	fmt.Println("URLs:", args.Urls)
-	OutPath string   `arg:"-o"`
+
+	// Example of accessing parsed arguments
+	if len(args.Urls) > 0 {
+		fmt.Println("First URL:", args.Urls[0])
+	} else {
+		fmt.Println("No URLs provided.")
+	}
+
+	// You can also print help text
+	p.WriteHelp(os.Stdout)
 }
 
 type Auth struct {
