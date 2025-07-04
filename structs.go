@@ -24,7 +24,14 @@ type Config struct {
 }
 
 type Args struct {
-	Urls    []string `arg:"positional"`
+	Urls []string `arg:"positional"`
+}
+
+func main() {
+	var args Args
+	p := arg.MustParse(&args)
+
+	fmt.Println("URLs:", args.Urls)
 	OutPath string   `arg:"-o"`
 }
 
